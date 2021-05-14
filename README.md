@@ -22,3 +22,6 @@ This is the main function that runs all the necessary subfunctions to update the
 The code is designed so that when ran, the code will generate a stack of .png images
 ## Example parameters & expected results
 As of 5/13/2021, the provided notebook generates passive coarsening for all values of a and b.
+
+### Reference
+Sabrina, S., Spellings, M., Glotzer, S. C., & Bishop, K. J. M. (2015). Coarsening dynamics of binary liquids with active rotation. Soft Matter, 11(43), 8409–8416. doi:10.1039/c5sm01753j
