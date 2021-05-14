@@ -27,6 +27,8 @@ This is the main function that runs all the necessary subfunctions (get_initial_
 
 The code is designed so that when ran, the code will generate a stack of .png images detailing the composition field of the domain over time.
 
+The strength of active rotation determines the strength/how fast the compositions rotate, the strength of frictional dampening determines how
+
 ### get_initial_configuration(N, lb, ub)
 This function generates a domain that has N-by-N grid points. These grid points are points where the velocity and composition of the binary liquid is updated over time. LowBD and upperBD specify the initial composition of the domain following a uniform distribution with the range [lowBD, upperBD], i.e., setting upperBD to be 1.0 will set up the domain to initially have a larger clockwise rotating composition.
 
