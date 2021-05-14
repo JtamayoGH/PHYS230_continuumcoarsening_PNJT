@@ -2,7 +2,7 @@
 ## Patrick Noerr, Joshua Tamayo
 ## PHYS 230, University of California, Merced.
 ## Code description 
-This Jupyter Notebook (Python 3.7) code is designed to solve the coupled convective Cahn-Hilliard and Navier-Stokes equation as described by Sabrina, et al., 2015 to model the coarsening dynamics of a binary liquid with active rotation.
+This Jupyter Notebook (Python 3.7) is designed to solve the coupled convective Cahn-Hilliard and Navier-Stokes equation as described by Sabrina, et al., 2015 to model the coarsening dynamics of a binary liquid with active rotation.
 The composition (rotation) of each phase is normalized such that counter-clockwise rotation = -1 and clockwise rotation = 1 (see Example 1 below)
 ### Required libraries/modules
 This code requires the following libraries to be installed in order to run: numpy, matplotlib, IPython, scipy, sympy, numba
@@ -23,5 +23,7 @@ The code is designed so that when ran, the code will generate a stack of .png im
 ## Example parameters & expected results
 As of 5/13/2021, the provided notebook generates passive coarsening for all values of a and b.
 
+### Example 1) Passive coarsening with a = 0.0001 and b = 100
+![alt text](https://github.com/JtamayoGH/PHYS230_continuumcoarsening/blob/main/GitHubImg/0.0001_100_100.00000000001425.png?raw=true)
 ### Reference
 Sabrina, S., Spellings, M., Glotzer, S. C., & Bishop, K. J. M. (2015). Coarsening dynamics of binary liquids with active rotation. Soft Matter, 11(43), 8409–8416. doi:10.1039/c5sm01753j
