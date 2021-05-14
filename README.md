@@ -15,8 +15,6 @@ forward_solver_full(10,100,100,-0.1,0.1,1)
 
 A brief description of key functions is below.
 
-### get_initial_configuration(N, lb, ub)
-This function generates a domain that has N-by-N grid points. These grid points are points where the velocity and composition of the binary liquid is updated over time. LowBD and upperBD specify the initial composition of the domain following a uniform distribution with the range [lowBD, upperBD], i.e., setting upperBD to be 1.0 will set up the domain to initially have a larger clockwise rotating composition.
 ### forward_solver_full(a, b, num_steps, N, lb, ub, interval)
 This is the main function that runs all the necessary subfunctions (get_initial_configuration, velocity, etc.) to update the velocity and composition fields with the following inputs:
 *	N – Divides the domain into a N-by-N grid where each grid point is a location where the velocity and composition fields are updated
@@ -28,6 +26,9 @@ This is the main function that runs all the necessary subfunctions (get_initial_
 *	interval - Specifies how many timesteps a .png image is generated
 
 The code is designed so that when ran, the code will generate a stack of .png images detailing the composition field of the domain over time.
+
+### get_initial_configuration(N, lb, ub)
+This function generates a domain that has N-by-N grid points. These grid points are points where the velocity and composition of the binary liquid is updated over time. LowBD and upperBD specify the initial composition of the domain following a uniform distribution with the range [lowBD, upperBD], i.e., setting upperBD to be 1.0 will set up the domain to initially have a larger clockwise rotating composition.
 
 ### velocity
 This subfunction updates the velocity fields on each grid point. Within this subfunction and commented out are lines of code that induce a velocity field onto the domain to try and mix the binary liquid.
