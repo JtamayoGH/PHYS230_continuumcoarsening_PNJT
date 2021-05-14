@@ -8,11 +8,15 @@ The composition (rotation) of each phase is normalized such that clockwise rotat
 This code requires the following libraries to be installed in order to run: numpy, matplotlib, IPython, scipy
 ## Code overview
 ### Instructions:
-Run each cell to import the libaries and initalize the functions, then run forward_solver_full to simulate the binary liquid system and generate movies
+Run each cell to import the libaries and initalize the functions, then run forward_solver_full to simulate the binary liquid system and generate a stack of timelapsed images.
+An example for a passive coarsening case is:
+forward_solver_full(10,100,100,-0.1,0.1,1)
+
+A brief description of key functions is below.
 
 ### get_initial_configuration(N, lb, ub)
 This function generates a domain that has N-by-N grid points. These grid points are points where the velocity and composition of the binary liquid is updated over time. LowBD and upperBD specify the initial composition of the domain following a uniform distribution with the range [lowBD, upperBD], i.e., setting upperBD to be 1.0 will set up the domain to initially have a larger clockwise rotating composition.
-### Forward_solver_full(a, b, num_steps, N, lb, ub, interval)
+### forward_solver_full(a, b, num_steps, N, lb, ub, interval)
 This is the main function that runs all the necessary subfunctions (get_initial_configuration, velocity, etc.) to update the velocity and composition fields with the following inputs:
 *	N – Divides the domain into a N-by-N grid where each grid point is a location where the velocity and composition fields are updated
 *	lb – Specifies how much of the initial composition is rotating clockwise. NOTE: Setting lb and ub to the same value will result in an even distribution of both phases
